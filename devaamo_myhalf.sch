@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.4">
+<eagle version="6.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -148,9 +148,9 @@
 <library name="OMAT_IC">
 <packages>
 <package name="SMD_ROUND_1.5MM">
-<smd name="1" x="0" y="0" dx="1.5" dy="1.5" layer="1" roundness="100"/>
+<smd name="1" x="0" y="0" dx="1.9812" dy="1.9812" layer="1" roundness="100"/>
 <text x="-1" y="1" size="1" layer="25">&gt;NAME</text>
-<circle x="0" y="0" radius="1" width="0.127" layer="21"/>
+<circle x="0" y="0" radius="1.27" width="0.127" layer="21"/>
 </package>
 <package name="SOP65P490X110-8N">
 <smd name="1" x="-2.1844" y="0.9652" dx="1.4224" dy="0.4318" layer="1"/>
@@ -1337,8 +1337,8 @@ Source: http://www.ledtronics.com/ds/smd-0603/Dstr0092.pdf</description>
 <pad name="9" x="20.32" y="0" drill="1.016" rot="R90"/>
 <pad name="10" x="22.86" y="0" drill="1.016" rot="R90"/>
 <text x="-1.27" y="1.651" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="-0.254" y="-2.794" size="1.27" layer="21" ratio="10">1</text>
-<text x="22.225" y="-2.921" size="1.27" layer="21" ratio="10">10</text>
+<text x="-2.794" y="-0.254" size="1.27" layer="21" ratio="10">1</text>
+<text x="24.765" y="-0.381" size="1.27" layer="21" ratio="10">10</text>
 <text x="6.35" y="1.651" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 <rectangle x1="-0.3302" y1="-0.3302" x2="0.3302" y2="0.3302" layer="51"/>
 <rectangle x1="2.2098" y1="-0.3302" x2="2.8702" y2="0.3302" layer="51"/>
@@ -1351,6 +1351,25 @@ Source: http://www.ledtronics.com/ds/smd-0603/Dstr0092.pdf</description>
 <rectangle x1="19.9898" y1="-0.3302" x2="20.6502" y2="0.3302" layer="51"/>
 <rectangle x1="22.5298" y1="-0.3302" x2="23.1902" y2="0.3302" layer="51"/>
 <wire x1="24.13" y1="0.635" x2="24.13" y2="-0.635" width="0.1524" layer="21"/>
+</package>
+<package name="61001018321">
+<description>WR-PHD 2.54mm SMT Pin Header, 10Pins</description>
+<wire x1="-12.7" y1="-1.27" x2="12.7" y2="-1.27" width="0.127" layer="51"/>
+<wire x1="12.7" y1="-1.27" x2="12.7" y2="1.27" width="0.127" layer="21"/>
+<wire x1="12.7" y1="1.27" x2="-12.7" y2="1.27" width="0.127" layer="51"/>
+<wire x1="-12.7" y1="1.27" x2="-12.7" y2="-1.27" width="0.127" layer="21"/>
+<smd name="1" x="-11.43" y="0" dx="1" dy="5.08" layer="1"/>
+<smd name="3" x="-6.35" y="0" dx="1" dy="5.08" layer="1"/>
+<smd name="5" x="-1.27" y="0" dx="1" dy="5.08" layer="1"/>
+<smd name="7" x="3.81" y="0" dx="1" dy="5.08" layer="1"/>
+<smd name="9" x="8.89" y="0" dx="1" dy="5.08" layer="1"/>
+<smd name="10" x="11.43" y="0" dx="1" dy="5.08" layer="1"/>
+<smd name="8" x="6.35" y="0" dx="1" dy="5.08" layer="1"/>
+<smd name="6" x="1.27" y="0" dx="1" dy="5.08" layer="1"/>
+<smd name="4" x="-3.81" y="0" dx="1" dy="5.08" layer="1"/>
+<smd name="2" x="-8.89" y="0" dx="1" dy="5.08" layer="1"/>
+<text x="-12.948" y="2.8861" size="1.27" layer="25">&gt;NAME</text>
+<text x="-15.488" y="-7.2042" size="1.27" layer="27">&gt;VALUE</text>
 </package>
 </packages>
 <symbols>
@@ -1892,7 +1911,7 @@ Source: www.kingbright.com</description>
 <gate name="G$1" symbol="PIIKKIRIMA-10" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="PIIKKIRIMA-10">
+<device name="TH" package="PIIKKIRIMA-10">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="10" pad="10"/>
@@ -1904,6 +1923,23 @@ Source: www.kingbright.com</description>
 <connect gate="G$1" pin="7" pad="7"/>
 <connect gate="G$1" pin="8" pad="8"/>
 <connect gate="G$1" pin="9" pad="9"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="SMD-WIRE" package="61001018321">
+<connects>
+<connect gate="G$1" pin="1" pad="10"/>
+<connect gate="G$1" pin="10" pad="1"/>
+<connect gate="G$1" pin="2" pad="9"/>
+<connect gate="G$1" pin="3" pad="8"/>
+<connect gate="G$1" pin="4" pad="7"/>
+<connect gate="G$1" pin="5" pad="6"/>
+<connect gate="G$1" pin="6" pad="5"/>
+<connect gate="G$1" pin="7" pad="4"/>
+<connect gate="G$1" pin="8" pad="3"/>
+<connect gate="G$1" pin="9" pad="2"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -11878,17 +11914,21 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <part name="R3" library="rcl" deviceset="R-EU_" device="R0603" value="330"/>
 <part name="+3V5" library="supply1" deviceset="+3V3" device=""/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
-<part name="X1" library="OMAT_IC" deviceset="PIIKKIRIMA-10" device=""/>
+<part name="X1" library="OMAT_IC" deviceset="PIIKKIRIMA-10" device="TH"/>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
 <part name="+3V6" library="supply1" deviceset="+3V3" device=""/>
 <part name="+1V5" library="supply1" deviceset="+1V8" device=""/>
 <part name="U$3" library="oma" deviceset="DEVAAMO" device=""/>
+<part name="X2" library="OMAT_IC" deviceset="PIIKKIRIMA-10" device="SMD-WIRE"/>
+<part name="GND6" library="supply1" deviceset="GND" device=""/>
+<part name="+3V4" library="supply1" deviceset="+3V3" device=""/>
+<part name="+1V4" library="supply1" deviceset="+1V8" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 <text x="259.08" y="-25.4" size="1.778" layer="95">MY OTHER HALF
-V1.10
+V1.20
 BREAKOUT BOARD</text>
 <text x="43.18" y="88.9" size="1.778" layer="95">CONNECTION TO JOLLA</text>
 </plain>
@@ -11927,6 +11967,10 @@ BREAKOUT BOARD</text>
 <instance part="+3V6" gate="G$1" x="294.64" y="68.58"/>
 <instance part="+1V5" gate="G$1" x="279.4" y="66.04"/>
 <instance part="U$3" gate="G$1" x="88.9" y="104.14"/>
+<instance part="X2" gate="G$1" x="365.76" y="50.8" rot="MR0"/>
+<instance part="GND6" gate="1" x="355.6" y="27.94"/>
+<instance part="+3V4" gate="G$1" x="345.44" y="68.58"/>
+<instance part="+1V4" gate="G$1" x="332.74" y="66.04"/>
 </instances>
 <busses>
 </busses>
@@ -11941,6 +11985,11 @@ BREAKOUT BOARD</text>
 <pinref part="X1" gate="G$1" pin="6"/>
 <wire x1="309.88" y1="48.26" x2="287.02" y2="48.26" width="0.1524" layer="91"/>
 <label x="289.56" y="48.26" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="360.68" y1="48.26" x2="337.82" y2="48.26" width="0.1524" layer="91"/>
+<label x="340.36" y="48.26" size="1.778" layer="95"/>
+<pinref part="X2" gate="G$1" pin="6"/>
 </segment>
 </net>
 <net name="SDA_1V8" class="0">
@@ -11966,6 +12015,11 @@ BREAKOUT BOARD</text>
 <wire x1="309.88" y1="43.18" x2="287.02" y2="43.18" width="0.1524" layer="91"/>
 <label x="289.56" y="43.18" size="1.778" layer="95"/>
 </segment>
+<segment>
+<wire x1="360.68" y1="43.18" x2="337.82" y2="43.18" width="0.1524" layer="91"/>
+<label x="340.36" y="43.18" size="1.778" layer="95"/>
+<pinref part="X2" gate="G$1" pin="8"/>
+</segment>
 </net>
 <net name="SCL_1V8" class="0">
 <segment>
@@ -11988,6 +12042,11 @@ BREAKOUT BOARD</text>
 <wire x1="309.88" y1="45.72" x2="287.02" y2="45.72" width="0.1524" layer="91"/>
 <label x="289.56" y="45.72" size="1.778" layer="95"/>
 </segment>
+<segment>
+<wire x1="360.68" y1="45.72" x2="337.82" y2="45.72" width="0.1524" layer="91"/>
+<label x="340.36" y="45.72" size="1.778" layer="95"/>
+<pinref part="X2" gate="G$1" pin="7"/>
+</segment>
 </net>
 <net name="VCC" class="0">
 <segment>
@@ -11999,6 +12058,11 @@ BREAKOUT BOARD</text>
 <pinref part="X1" gate="G$1" pin="9"/>
 <wire x1="309.88" y1="40.64" x2="287.02" y2="40.64" width="0.1524" layer="91"/>
 <label x="289.56" y="40.64" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="360.68" y1="40.64" x2="337.82" y2="40.64" width="0.1524" layer="91"/>
+<label x="340.36" y="40.64" size="1.778" layer="95"/>
+<pinref part="X2" gate="G$1" pin="9"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -12056,6 +12120,16 @@ BREAKOUT BOARD</text>
 <wire x1="304.8" y1="60.96" x2="304.8" y2="38.1" width="0.1524" layer="91"/>
 <junction x="304.8" y="38.1"/>
 </segment>
+<segment>
+<wire x1="360.68" y1="38.1" x2="355.6" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="355.6" y1="38.1" x2="355.6" y2="30.48" width="0.1524" layer="91"/>
+<pinref part="GND6" gate="1" pin="GND"/>
+<wire x1="360.68" y1="60.96" x2="355.6" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="355.6" y1="60.96" x2="355.6" y2="38.1" width="0.1524" layer="91"/>
+<junction x="355.6" y="38.1"/>
+<pinref part="X2" gate="G$1" pin="10"/>
+<pinref part="X2" gate="G$1" pin="1"/>
+</segment>
 </net>
 <net name="+1V8" class="0">
 <segment>
@@ -12086,6 +12160,12 @@ BREAKOUT BOARD</text>
 <wire x1="279.4" y1="50.8" x2="279.4" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="X1" gate="G$1" pin="5"/>
 <wire x1="279.4" y1="50.8" x2="309.88" y2="50.8" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="+1V4" gate="G$1" pin="+1V8"/>
+<wire x1="332.74" y1="50.8" x2="332.74" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="332.74" y1="50.8" x2="360.68" y2="50.8" width="0.1524" layer="91"/>
+<pinref part="X2" gate="G$1" pin="5"/>
 </segment>
 </net>
 <net name="+3V3" class="0">
@@ -12133,6 +12213,12 @@ BREAKOUT BOARD</text>
 <pinref part="+3V6" gate="G$1" pin="+3V3"/>
 <wire x1="294.64" y1="66.04" x2="294.64" y2="58.42" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<wire x1="360.68" y1="58.42" x2="345.44" y2="58.42" width="0.1524" layer="91"/>
+<pinref part="+3V4" gate="G$1" pin="+3V3"/>
+<wire x1="345.44" y1="66.04" x2="345.44" y2="58.42" width="0.1524" layer="91"/>
+<pinref part="X2" gate="G$1" pin="2"/>
+</segment>
 </net>
 <net name="SCL_3V3" class="0">
 <segment>
@@ -12149,6 +12235,11 @@ BREAKOUT BOARD</text>
 <wire x1="309.88" y1="55.88" x2="287.02" y2="55.88" width="0.1524" layer="91"/>
 <label x="289.56" y="55.88" size="1.778" layer="95"/>
 </segment>
+<segment>
+<wire x1="360.68" y1="55.88" x2="337.82" y2="55.88" width="0.1524" layer="91"/>
+<label x="340.36" y="55.88" size="1.778" layer="95"/>
+<pinref part="X2" gate="G$1" pin="3"/>
+</segment>
 </net>
 <net name="SDA_3V3" class="0">
 <segment>
@@ -12164,6 +12255,11 @@ BREAKOUT BOARD</text>
 <pinref part="X1" gate="G$1" pin="4"/>
 <wire x1="309.88" y1="53.34" x2="287.02" y2="53.34" width="0.1524" layer="91"/>
 <label x="289.56" y="53.34" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="360.68" y1="53.34" x2="337.82" y2="53.34" width="0.1524" layer="91"/>
+<label x="340.36" y="53.34" size="1.778" layer="95"/>
+<pinref part="X2" gate="G$1" pin="4"/>
 </segment>
 </net>
 <net name="N$2" class="0">
