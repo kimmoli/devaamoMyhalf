@@ -9,6 +9,6 @@ V1.20 SMD connector added, pogopads relocated and resized to 2 mm dia, flash hol
 
 
 
-See also talk.maemo.org/showthread.php?t=92329
+See also http://talk.maemo.org/showthread.php?t=92329
 
 
